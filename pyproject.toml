@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ytclip"
+version = "1.0.0"
+description = "A fast YouTube video clip downloader with timestamp support"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+keywords = ["youtube", "video", "downloader", "clip", "timestamp", "ffmpeg"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Multimedia :: Video",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "yt-dlp>=2024.1.0",
+]
+
+[project.scripts]
+ytclip = "ytclip.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/ytclip"
+Issues = "https://github.com/yourusername/ytclip/issues"
