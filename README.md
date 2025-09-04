@@ -1,14 +1,14 @@
-# ytclip
+# YouTube Clippy (ytclip)
 
 A fast and efficient YouTube video clip downloader that extracts specific time segments without downloading entire videos.
 
 ## Features
 
-- = **Stream-based clipping** - Downloads only the specified segment, not the entire video
--  **Timestamp support** - Specify exact start and end times
--  **Speed adjustment** - Change playback speed (0.5x to 4x)
-- < **QuickTime compatible** - Outputs H.264/AAC MP4 files
-- = **Minimal dependencies** - Just needs yt-dlp and ffmpeg
+- **Stream-based clipping** - Downloads only the specified segment, not the entire video
+- **Timestamp support** - Specify exact start and end times
+- **Speed adjustment** - Change playback speed (0.5x to 4x)
+- **QuickTime compatible** - Outputs H.264/AAC MP4 files
+- **Minimal dependencies** - Just needs yt-dlp and ffmpeg
 
 ## Installation
 
@@ -30,17 +30,17 @@ sudo apt install ffmpeg
 **Windows:**
 Download from [ffmpeg.org](https://ffmpeg.org/download.html) and add to PATH
 
-### Install via pip
+### Install from PyPI
 
 ```bash
-pip install ytclip
+pip install youtube-clippy
 ```
 
 ### Install from source
 
 ```bash
-git clone https://github.com/yourusername/ytclip.git
-cd ytclip
+git clone https://github.com/eden-chan/youtube-clippy.git
+cd youtube-clippy
 pip install -e .
 ```
 
@@ -91,15 +91,16 @@ optional arguments:
   -s SPEED, --speed SPEED
                         Playback speed (e.g., 1.5 for 1.5x speed, 0.5 for half speed)
                         Range: 0.25 to 4.0 (default: 1.0)
+  -v, --version         Show version number
 ```
 
 ## How It Works
 
 Unlike traditional YouTube downloaders that fetch entire videos, `ytclip` uses ffmpeg's seeking capability to stream only the required segment. This means:
 
--  **Faster downloads** - Only downloads what you need
--  **Less bandwidth** - Saves data by not downloading unnecessary content
--  **Less storage** - No temporary full-video files
+- **Faster downloads** - Only downloads what you need
+- **Less bandwidth** - Saves data by not downloading unnecessary content
+- **Less storage** - No temporary full-video files
 
 The tool:
 1. Extracts video metadata using yt-dlp
@@ -173,6 +174,12 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 Built with:
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp) - YouTube video extractor
 - [FFmpeg](https://ffmpeg.org/) - Video processing
+
+## Links
+
+- **GitHub**: https://github.com/eden-chan/youtube-clippy
+- **PyPI**: https://pypi.org/project/youtube-clippy/
+- **Issues**: https://github.com/eden-chan/youtube-clippy/issues
 
 ## Changelog
 
